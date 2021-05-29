@@ -48,12 +48,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <div class="row">
                 <nav class="col-md-3 d-none d-md-block bg-light sidebar">
                     <div id="controls">
-                        <h3 class="result">Inbreeding: <span id="result"></span></h3>
                         <ul id="breakdown"></ul>
                         <button class="btn btn-sm btn-block btn-success" id="calculate">Calculate</button>
                         <p>&nbsp;</p>
-                        <p>
-                            Show
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="generations">Generations</label>
+                            </div>
                             <select class="custom-select" id="generations">
                                 <option value="4">4</option>
                                 <option value="5">5</option>
@@ -65,24 +66,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                                 <option value="11">11</option>
                                 <option value="12">12</option>
                             </select>
-                            generations back
-                        </p>
-                        <p>
+                        </div>
+                        <div class="input-group mb-3">
                             <button class="btn btn-sm btn-block btn-danger" id="clear">Clear pedigree</button>
                             <button class="btn btn-sm btn-block btn-primary" id="clear-selected" class="require-selection">
                                 Clear selected individual and ancestors</button>
-                        </p>
-                        <p>
+                        </div>
+                        <div class="input-group mb-3">
                             <button class="btn btn-sm btn-block btn-primary" id="show-data">Show offspring's data</button>
                             <button class="btn btn-sm btn-block btn-primary" id="show-selected-data" class="require-selection">
                                 Show selected individual's data</button>
-                        </p>
-                        <p>
+                        </div>
+                        <div class="input-group mb-3">
                             <button class="btn btn-sm btn-block btn-primary" id="populate">Populate pedigree</button>
                             <button class="btn btn-sm btn-block btn-primary" id="populate-selected" class="require-selection">
                                 Populate selected individual and ancestors</button>
-                        </p>
-                        
+                        </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
                               <span class="input-group-text">Copy/paste pedigree data here:</span>
@@ -97,7 +96,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                         </span>
                     </div>
                 </nav>
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-9 pt-3 px-4">
                     <div id="pedigree">
                         <table data-level="0">
                             <tr class="offspring">
