@@ -879,6 +879,34 @@ function clearField (field) {
     updateMoreLabels();
 }
 
+function clearCurrentField() {
+    var code = getCode(currentField);
+    var node;
+    var fieldsToClear;
+    try {
+        node = getNodeFromCode(code);
+    } catch(e) {
+        return;
+    }
+
+    clear(node, code); // Recursive
+
+    // The browser might have filled in fields that don't correspond to any pedigree
+    // data, so clear fields now.
+    if (code) {
+        fieldsToClear = $('input[id^=' + code + ']')
+    } else {
+        // starting with offspring; clear all the fields
+        fieldsToClear = $('#pedigree input');
+    }
+    fieldsToClear.each(function(i, elem) {
+        $(elem).val('');
+    });
+    
+    replicate(code);
+    updateMoreLabels();
+}
+
 function showData(field) {
     var code = getCode(field);
     var node;
@@ -992,16 +1020,12 @@ function confirm(message, noButton, yesButton, func) {
     })
 }
 
-function confirmModal(message) {
-    $('.modal-body').append(
-        '<p>' + message + '</p>');
-}
-
 function clearAll() {
     confirm('Clear entire pedigree?', 'Cancel', 'Clear', function () {
         clearField($('input#offspring'));
     });
 }
+
 function clearSelected() {
     var field = currentField;
     confirm('Clear data?', 'Cancel', 'Clear', function () {
@@ -1058,6 +1082,12 @@ $(document).ready(function() {
         .on('keyup', 'input.ind', showNameChoices)
         .on('click', 'ul.name-choices li', setFieldFromMenu)
         .on('blur', 'input.ind', hideNameChoices);
+    $(".ind").focus(function() {
+        var field = $(this);
+        window.setTimeout(function () {
+            currentField = field;
+        }, 100);
+    });
     
     clearCurrentField();
     });
