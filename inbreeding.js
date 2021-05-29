@@ -976,8 +976,8 @@ function confirm(message, noButton, yesButton, func) {
     $('body').append(
         '<div id="confirmDialog">' +
         '<p>' + message + '</p>' +
-        '<p><button id="confirmNo">' + noButton + '</button>&nbsp;&nbsp;' +
-            '<button id="confirmYes">' + yesButton + '</button></p>' +
+        '<p><button class="btn btn-sm btn-block btn-primary" id="confirmNo">' + noButton + '</button>&nbsp;&nbsp;' +
+            '<button class="btn btn-sm btn-block btn-primary" id="confirmYes">' + yesButton + '</button></p>' +
         '</div>');
     $('#confirmNo').click(function () {
         $('#confirmDialog').remove();
