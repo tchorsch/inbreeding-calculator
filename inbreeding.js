@@ -992,6 +992,11 @@ function confirm(message, noButton, yesButton, func) {
     })
 }
 
+function confirmModal(message) {
+    $('.modal-body').append(
+        '<p>' + message + '</p>');
+}
+
 function clearAll() {
     confirm('Clear entire pedigree?', 'Cancel', 'Clear', function () {
         clearField($('input#offspring'));
