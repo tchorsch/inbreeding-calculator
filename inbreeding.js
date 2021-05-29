@@ -906,6 +906,10 @@ function clearCurrentField() {
     replicate(code);
     updateMoreLabels();
 }
+function resetPage(){
+    clearField($('input#offspring'));
+    clearResult();
+}
 
 function showData(field) {
     var code = getCode(field);
