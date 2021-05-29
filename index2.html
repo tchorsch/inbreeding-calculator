@@ -50,11 +50,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                     <div id="controls">
                         <h3 class="result">Inbreeding: <span id="result"></span></h3>
                         <ul id="breakdown"></ul>
-                        <button class="btn btn-sm btn-block btn-primary" id="calculate">Calculate</button>
+                        <button class="btn btn-sm btn-block btn-success" id="calculate">Calculate</button>
                         <p>&nbsp;</p>
                         <p>
                             Show
-                            <select id="generations">
+                            <select class="custom-select" id="generations">
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
@@ -68,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                             generations back
                         </p>
                         <p>
-                            <button class="btn btn-sm btn-block btn-primary" id="clear">Clear pedigree</button>
+                            <button class="btn btn-sm btn-block btn-danger" id="clear">Clear pedigree</button>
                             <button class="btn btn-sm btn-block btn-primary" id="clear-selected" class="require-selection">
                                 Clear selected individual and ancestors</button>
                         </p>
@@ -83,10 +83,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                                 Populate selected individual and ancestors</button>
                         </p>
                         
-                        <p>Copy/paste pedigree data here:</p>
-                        <textarea id="textarea" wrap="off"></textarea>
-                        
-                        <p>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Copy/paste pedigree data here:</span>
+                            </div>
+                            <textarea id="textarea" wrap="off" class="form-control" aria-label="Copy/paste pedigree data here:"></textarea>
+                          </div>
                             <input type="checkbox" id="wide_fields">
                             <label for="wide_fields">Wide fields</label>
                         </p>
