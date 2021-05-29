@@ -360,8 +360,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                     Are you certain you wish to clear the data?
                 </div>
                 <div class="modal-footer">
-                  <button onclick="clearField($('input#offspring'))" type="button" class="btn btn-danger">Clear All</button>
-                  <button onclick="clearCurrentField()" type="button" class="btn btn-warning">Clear Selected and Ancestors</button>
+                  <button onclick="clearField($('input#offspring'))" type="button" class="btn btn-danger" data-bs-dismiss="modal">Clear All</button>
+                  <button onclick="clearCurrentField()" type="button" class="btn btn-warning" data-bs-dismiss="modal">Clear Selected and Ancestors</button>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
