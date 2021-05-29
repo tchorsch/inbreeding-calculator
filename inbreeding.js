@@ -1075,7 +1075,7 @@ $(document).ready(function() {
     $('#pedigree')
         .on('change keydown', 'input.ind', clearResult)
         .on('focusin', 'input.ind', setCurrentField)
-        .on('focusout', 'input.ind', clearCurrentField)
+        //.on('focusout', 'input.ind', clearCurrentField)
         .on('click', '.more', showMore)
         .on('change', 'input.ind', changeField)
         .on('change', 'input.ind', replicateField)
