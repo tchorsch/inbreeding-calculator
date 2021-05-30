@@ -34,15 +34,3 @@ input.ind {
     width: 10em;
     border: 1px solid gray;
 }
-html, body {
-    height: 100%;
-}
-.container-fluid {
-    height: 100% !important;
-    margin-bottom: 54px;
-    overflow-y: hidden; /* don't show content that exceeds my height */
-}
-.row{
-    height: 100% !important;
-    margin-bottom: 54px;
-}
