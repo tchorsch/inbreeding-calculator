@@ -38,9 +38,9 @@ html, body {
     height: 100%;
 }
 .container-fluid {
-    height: 100% !important;
+    height: -webkit-calc(100% - 54px) !important;
     overflow-y: hidden; /* don't show content that exceeds my height */
 }
 .row{
-    height: 100% !important;
+    height: -webkit-calc(100% - 54px) !important;
 }
