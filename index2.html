@@ -43,14 +43,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
             <ul class="navbar-nav px-3">
                 <h2 class="text-nowrap">Inbreeding Calculator <sup style="color: red">Beta</sup></h2>
-                <span>
-                    by Sam Kauffman of <a class="nav-link" href="http://zikahamstery.weebly.com">Zika Hamstery</a>
-                </span>
             </ul>
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
                     <a class="nav-link" href="about.html">Information and instructions</a>
                 </li>
+            </ul>
+        </nav>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+            <ul class="navbar-nav px-3">
+                <span>
+                    by Sam Kauffman of <a class="nav-link" href="http://zikahamstery.weebly.com">Zika Hamstery</a>
+                </span>
             </ul>
         </nav>
         <div class="container-fluid">
@@ -60,22 +64,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                         <h3 class="result">Inbreeding: <span id="result"></span></h3>
                         <ul id="breakdown"></ul>
                         <p>&nbsp;</p>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <label class="input-group-text" for="generations">Generations</label>
-                            </div>
-                            <select class="custom-select" id="generations">
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
                         <div class="input-group mb-2">
                             <button
                                 class="btn btn-sm btn-success"
@@ -100,6 +88,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                                 data-bs-target="#importExportModal">
                                     Import/Export
                             </button>
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="generations">Generations</label>
+                            </div>
+                            <select class="custom-select" id="generations">
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
                         </div>
                         <!--
                         <div class="input-group mb-2">
